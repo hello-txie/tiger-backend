@@ -28,4 +28,10 @@ public class ScopeSubmissionController {
     public List<ScopeSubmission> getSubmissions() {
         return formSubmissionService.getAllSubmissions();
     }
+
+    @GET
+    @Path("/email")
+    public List<ScopeSubmission> getSubmissionsByEmail(@QueryParam("email") String email) {
+        return formSubmissionService.getSubmissionsByEmail(email);
+    }
 }
